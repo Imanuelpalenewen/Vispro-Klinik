@@ -48,6 +48,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.panelHeader.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -198,7 +199,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(296, 115);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
+            this.textBox1.Size = new System.Drawing.Size(255, 20);
             this.textBox1.TabIndex = 14;
             // 
             // textBox2
@@ -212,35 +213,47 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(295, 174);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 20);
+            this.textBox3.Size = new System.Drawing.Size(256, 20);
             this.textBox3.TabIndex = 16;
             // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(295, 201);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(370, 20);
+            this.textBox4.Size = new System.Drawing.Size(256, 20);
             this.textBox4.TabIndex = 17;
             // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(295, 230);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(200, 20);
+            this.textBox5.Size = new System.Drawing.Size(256, 20);
             this.textBox5.TabIndex = 18;
             // 
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(295, 258);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(200, 20);
+            this.textBox6.Size = new System.Drawing.Size(256, 20);
             this.textBox6.TabIndex = 19;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button3.Location = new System.Drawing.Point(295, 315);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(100, 35);
+            this.button3.TabIndex = 20;
+            this.button3.Text = "Register";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // FormRegisterUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 393);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
@@ -291,5 +304,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button button3;
     }
 }

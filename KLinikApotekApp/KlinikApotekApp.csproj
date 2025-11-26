@@ -156,6 +156,12 @@
     <Compile Include="FormManageUsers.Designer.cs">
       <DependentUpon>FormManageUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPembelianObat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPembelianObat.Designer.cs">
+      <DependentUpon>FormPembelianObat.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormViewObat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormManageUsers.resx">
       <DependentUpon>FormManageUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPembelianObat.resx">
+      <DependentUpon>FormPembelianObat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegisterUser.resx">
       <DependentUpon>FormRegisterUser.cs</DependentUpon>
