@@ -102,3 +102,5 @@ D:\Document\Kuliah\Sem 5\Vispro - C\Final\Clinic\KlinikApotekApp\KlinikApotekApp
 D:\Document\Kuliah\Sem 5\Vispro - C\Final\Clinic\KlinikApotekApp\KlinikApotekApp\KlinikApotekApp\obj\Debug\KlinikAp.0CB8DE5E.Up2Date
 D:\Document\Kuliah\Sem 5\Vispro - C\Final\Clinic\KlinikApotekApp\KlinikApotekApp\KlinikApotekApp\obj\Debug\KlinikApotekApp.exe
 D:\Document\Kuliah\Sem 5\Vispro - C\Final\Clinic\KlinikApotekApp\KlinikApotekApp\KlinikApotekApp\obj\Debug\KlinikApotekApp.pdb
+D:\Document\Kuliah\Sem 5\Vispro - C\Final\Clinic\KlinikApotekApp\KlinikApotekApp\KlinikApotekApp\obj\Debug\KlinikApotekApp.FormDashboardUser.resources
+D:\Document\Kuliah\Sem 5\Vispro - C\Final\Clinic\KlinikApotekApp\KlinikApotekApp\KlinikApotekApp\obj\Debug\KlinikApotekApp.FormRegisterUser.resources
