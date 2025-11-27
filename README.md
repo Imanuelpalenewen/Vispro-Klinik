@@ -1,4 +1,4 @@
-# ?? Klinik Apotek App - Sistem Manajemen Klinik & Apotek
+# Klinik Apotek App - Sistem Manajemen Klinik & Apotek
 
 **Aplikasi Desktop Manajemen Klinik & Apotek Berbasis Windows Forms**
 
@@ -9,68 +9,68 @@
 
 ---
 
-## ?? Tim Pengembang - Kelompok [4]
+## Tim Pengembang - Kelompok [4]
 
 **Ketua Kelompok:**
-- **[Palenewen, Imanuel]** 
+- **Palenewen, Imanuel** - 220211060179
 
 **Anggota:**
-- **[Tjia, David]**  
-- **[Jeblo, Joshua]**  
-- **[Mantiri, Revaldo]**  
+- **Tjia, David** - 220211060059
+- **Jeblo, Joshua** - 220211060189
+- **Mantiri, Revaldo** - 220211060169
 
-**Mata Kuliah:** Visual Programming - (C 
+**Mata Kuliah:** Visual Programming - (C#)  
 **Semester:** 5  
 **Tahun Akademik:** 2024/2025
 
 ---
 
-## ?? Tentang Proyek
+## Tentang Proyek
 
 Klinik Apotek App adalah aplikasi desktop berbasis Windows Forms (.NET Framework 4.7.2) yang dirancang untuk mengelola sistem klinik dan apotek secara terintegrasi. Aplikasi ini menyediakan fitur lengkap untuk manajemen pasien, obat, resep, transaksi, dan user dengan role-based access control.
 
-### ? Fitur Utama
+### Fitur Utama
 
-#### ?? Sistem Login & Autentikasi
-- ? Multi-role authentication (Admin, Apoteker, Pasien)
-- ? Self-registration untuk pasien baru
-- ? Validasi username duplikat
-- ? Password minimal 6 karakter
-- ? Auto-create user account saat registrasi
+#### Sistem Login & Autentikasi
+- Multi-role authentication (Admin, Apoteker, User/Pasien)
+- Self-registration untuk pasien baru
+- Validasi username duplikat
+- Password minimal 6 karakter
+- Auto-create user account saat registrasi
 
-#### ????? Dashboard Admin
-- ? **Manage Pasien**: CRUD data pasien lengkap
-- ? **Manage Obat**: CRUD obat dengan stok management
-- ? **Manage Users**: CRUD user accounts dengan role
-- ? **Manage Resep**: CRUD data resep dokter
-- ? **Manage Transaksi**: View & input transaksi manual
-- ? **Auto-update stok**: Stok otomatis berkurang saat transaksi
+#### Dashboard Admin
+- **Manage Pasien**: CRUD data pasien lengkap
+- **Manage Obat**: CRUD obat dengan stok management
+- **Manage Users**: CRUD user accounts dengan role
+- **Manage Resep**: CRUD data resep dokter
+- **Manage Transaksi**: View & input transaksi manual
+- **Auto-update stok**: Stok otomatis berkurang saat transaksi
 
-#### ?? Dashboard Apoteker
-- ? **Input Transaksi**: Penjualan obat ke pasien
-- ? **View Obat**: Lihat daftar obat & stok tersedia
-- ? **View Resep**: Filter resep berdasarkan pasien
-- ? **Real-time Stock Update**: Stok update otomatis
+#### Dashboard Apoteker
+- **Input Transaksi**: Penjualan obat ke pasien
+- **View Obat**: Lihat daftar obat & stok tersedia
+- **View Resep**: Filter resep berdasarkan pasien
+- **Real-time Stock Update**: Stok update otomatis
 
-#### ?? Dashboard User/Pasien
-- ? **Shopping Cart System**: 
+#### Dashboard User/Pasien
+- **Shopping Cart System**: 
   - Browse obat dengan search/filter
   - Checkbox untuk pilih multiple obat
   - Input jumlah beli dengan validasi stok
   - Keranjang belanja dengan edit & delete item
   - Auto-calculate subtotal & total
   
-- ? **Transaction History**:
+- **Transaction History**:
   - View semua transaksi pribadi
   - Format currency Indonesia (Rp)
   - DateTime format dd/MM/yyyy HH:mm
   
-- ? **Selection Persistence**:
+- **Selection Persistence**:
   - Data selection tersimpan saat search/refresh
   - Preserved on cancel purchase
   - Cleared only after successful payment
 
-### ??? Teknologi yang Digunakan
+### Teknologi yang Digunakan
 
 - **Framework**: .NET Framework 4.7.2
 - **Language**: C# 7.3
@@ -85,7 +85,7 @@ Klinik Apotek App adalah aplikasi desktop berbasis Windows Forms (.NET Framework
 
 ---
 
-## ??? Database Schema
+## Database Schema
 
 ### Tables (5):
 1. **pasien** - Data pasien (id, nama, umur, nohp, alamat)
@@ -106,9 +106,9 @@ Klinik Apotek App adalah aplikasi desktop berbasis Windows Forms (.NET Framework
 
 ---
 
-## ?? Cara Instalasi dan Menjalankan
+## Cara Instalasi dan Menjalankan
 
-### ?? Prasyarat
+### Prasyarat
 
 - **Operating System**: Windows 7/8/10/11
 - **IDE**: Visual Studio 2017 atau lebih tinggi
@@ -116,14 +116,14 @@ Klinik Apotek App adalah aplikasi desktop berbasis Windows Forms (.NET Framework
 - **Database**: MySQL 8.0+ atau XAMPP
 - **RAM**: Minimal 2GB (4GB direkomendasikan)
 
-### ?? Langkah 1: Clone Repository
+### Langkah 1: Clone Repository
 
 ```sh
 git clone https://github.com/Imanuelpalenewen/Vispro-Klinik.git
 cd Vispro-Klinik
 ```
 
-### ??? Langkah 2: Setup Database
+### Langkah 2: Setup Database
 
 1. **Start MySQL Server**
    - Jika pakai XAMPP: Start Apache & MySQL
@@ -144,7 +144,7 @@ mysql -u root -p < database-setup.sql
    - 5 tables ada (pasien, obat, users, resep, transaksi)
    - Sample data ter-insert (admin, apoteker, obat)
 
-### ?? Langkah 3: Konfigurasi Connection String
+### Langkah 3: Konfigurasi Connection String
 
 Edit file **`KlinikApotekApp\Database.cs`**:
 
@@ -156,7 +156,7 @@ public static string ConnectionString = "server=localhost;user id=root;password=
 - Jika MySQL pakai password: `password=your_password_here;`
 - Jika MySQL di port lain: `server=localhost;port=3307;...`
 
-### ??? Langkah 4: Build & Run
+### Langkah 4: Build & Run
 
 **Via Visual Studio:**
 1. Buka `KlinikApotekApp.sln` di Visual Studio
@@ -177,7 +177,7 @@ KlinikApotekApp.exe
 
 ---
 
-## ?? Default User Accounts
+## Default User Accounts
 
 Setelah setup database, gunakan akun berikut untuk login:
 
@@ -190,9 +190,9 @@ Setelah setup database, gunakan akun berikut untuk login:
 
 ---
 
-## ?? Cara Menggunakan
+## Cara Menggunakan
 
-### ?? Untuk Admin:
+### Untuk Admin:
 
 1. **Login**
    - Username: `admin`
@@ -206,7 +206,7 @@ Setelah setup database, gunakan akun berikut untuk login:
    - **Input Transaksi**: Input transaksi manual
    - **Manage Transaksi**: View semua transaksi
 
-### ?? Untuk Apoteker:
+### Untuk Apoteker:
 
 1. **Login**
    - Username: `apoteker`
@@ -217,7 +217,7 @@ Setelah setup database, gunakan akun berikut untuk login:
    - **View Obat**: Lihat semua obat & stok
    - **View Resep**: Filter resep by pasien
 
-### ?? Untuk User/Pasien:
+### Untuk User/Pasien:
 
 #### A. Registrasi (Pertama Kali)
 1. Klik **"Daftar Sebagai Pasien Baru"**
@@ -235,7 +235,7 @@ Setelah setup database, gunakan akun berikut untuk login:
 1. **Login** dengan username/password yang dibuat
 2. **Tab "List Obat"**:
    - Browse atau search obat by nama
-   - ? Check obat yang ingin dibeli
+   - Check obat yang ingin dibeli
    - Edit jumlah (max sesuai stok)
    - Selection tetap tersimpan saat search/refresh
 3. **Klik "Beli Obat"** ? Keranjang terbuka
@@ -251,9 +251,9 @@ Setelah setup database, gunakan akun berikut untuk login:
 
 ---
 
-## ?? Fitur Teknis
+## Fitur Teknis
 
-### ? Validasi & Error Handling
+### Validasi & Error Handling
 - Validasi input form lengkap (required fields, format)
 - Username duplicate checking (real-time)
 - Stock validation (jumlah ? stok tersedia)
@@ -261,7 +261,7 @@ Setelah setup database, gunakan akun berikut untuk login:
 - Database transaction rollback on error
 - Try-catch di semua database operations
 
-### ?? User Experience
+### User Experience
 - **Auto-calculate**: Subtotal & total otomatis
 - **Currency format**: Rp format Indonesia (id-ID)
 - **Date format**: dd/MM/yyyy HH:mm
@@ -270,13 +270,13 @@ Setelah setup database, gunakan akun berikut untuk login:
 - **Auto-refresh**: Data update setelah CRUD operations
 - **Selection persistence**: Cart items saved across searches
 
-### ??? Database Transactions
+### Database Transactions
 - **ACID Compliance**: Atomic, Consistent, Isolated, Durable
 - **Registration**: INSERT pasien + INSERT user (single transaction)
 - **Purchase**: INSERT transaksi + UPDATE stok (atomic operation)
 - **Auto-rollback**: Jika error di tengah transaction
 
-### ?? Design Patterns
+### Design Patterns
 - **Repository Pattern**: Centralized data access (Database.cs)
 - **Transaction Pattern**: Multi-table operations
 - **RBAC**: Role-Based Access Control (Admin/Apoteker/User)
@@ -284,7 +284,7 @@ Setelah setup database, gunakan akun berikut untuk login:
 
 ---
 
-## ?? Desain UI
+## Desain UI
 
 ### Color Palette:
 - **Primary Blue**: #2E86C1 (Buttons, Headers)
@@ -310,7 +310,7 @@ Setelah setup database, gunakan akun berikut untuk login:
 
 ---
 
-## ?? Performa System
+## Performa System
 
 | Metric | Value |
 |--------|-------|
@@ -321,44 +321,44 @@ Setelah setup database, gunakan akun berikut untuk login:
 | **Max Concurrent Users** | 10+ (local network) |
 | **Database Size (sample data)** | < 5MB |
 
-### ? Optimizations Applied:
-- ? Connection pooling (MySQL Connector)
-- ? Indexed primary keys & foreign keys
-- ? Parameterized queries (SQL injection prevention)
-- ? Using statements for auto-disposal
-- ? DataTable caching for frequent queries
-- ? Lazy loading for large datasets
+### Optimizations Applied:
+- Connection pooling (MySQL Connector)
+- Indexed primary keys & foreign keys
+- Parameterized queries (SQL injection prevention)
+- Using statements for auto-disposal
+- DataTable caching for frequent queries
+- Lazy loading for large datasets
 
 ---
 
-## ?? Troubleshooting
+## Troubleshooting
 
-### ? Error: "Unable to connect to MySQL server"
+### Error: "Unable to connect to MySQL server"
 **Solusi:**
 1. Pastikan MySQL/XAMPP running
 2. Check connection string di `Database.cs`
 3. Verify port (default: 3306)
 4. Test connection: `mysql -u root -p`
 
-### ? Error: "Table 'klinik_db.xxx' doesn't exist"
+### Error: "Table 'klinik_db.xxx' doesn't exist"
 **Solusi:**
 1. Run ulang `database-setup.sql`
 2. Pastikan `USE klinik_db;` dieksekusi
 3. Verify tables: `SHOW TABLES;`
 
-### ? Error: "Username sudah digunakan"
+### Error: "Username sudah digunakan"
 **Solusi:**
 - Ganti username saat registrasi
 - Username harus unique
 
-### ? Stok obat tidak update setelah pembelian
+### Stok obat tidak update setelah pembelian
 **Solusi:**
 1. Check transaction di FormPembelianObat.cs
 2. Verify query UPDATE stok
 3. Check database foreign keys
 4. Refresh DataGridView: F5
 
-### ? Build Error: "Missing MySql.Data"
+### Build Error: "Missing MySql.Data"
 **Solusi:**
 ```sh
 # Via NuGet Package Manager Console:
@@ -368,7 +368,7 @@ Install-Package MySql.Data -Version 8.0.33
 dotnet add package MySql.Data --version 8.0.33
 ```
 
-### ? Form Designer Error
+### Form Designer Error
 **Solusi:**
 1. Clean Solution (Build ? Clean)
 2. Rebuild Solution (Build ? Rebuild)
@@ -377,7 +377,7 @@ dotnet add package MySql.Data --version 8.0.33
 
 ---
 
-## ?? Struktur Project
+## Struktur Project
 
 ```
 KlinikApotekApp/
@@ -415,13 +415,62 @@ KlinikApotekApp/
 ??? .gitignore                    # Git ignore rules
 ??? README.md                     # This file
 
+Documentation/ (AI-generated - not tracked by git)
+??? COMPLETION-SUMMARY.md         # Project completion status
+??? TESTING-GUIDE.md              # Manual testing guide
+??? BUG-FIXES.md                  # Bug fix documentation
+??? USER-MODULE-IMPLEMENTATION-GUIDE.md
+??? QUICK-START-GUIDE.md
 ```
 
 ---
 
-## ?? Catatan Penting
+## Testing Checklist
 
-### ?? Password Security
+### Registration Flow:
+- [x] Register dengan data lengkap ? Success
+- [x] Register dengan username duplikat ? Error message
+- [x] Register dengan password < 6 char ? Error message
+- [x] Register dengan field kosong ? Error message
+- [x] Cancel registrasi ? Back to login
+
+### Login Flow:
+- [x] Login as Admin ? Dashboard Admin
+- [x] Login as Apoteker ? Dashboard Apoteker
+- [x] Login as User ? Dashboard User
+- [x] Wrong credentials ? Error message
+
+### User Shopping Flow:
+- [x] Browse obat ? DataGridView populated
+- [x] Search obat by nama ? Filter works
+- [x] Select multiple obat ? Checkbox works
+- [x] Edit jumlah ? Validation (max = stok)
+- [x] Selection persistence ? Saved on search/refresh
+- [x] Beli obat ? Cart opens with selected items
+- [x] Edit jumlah di cart ? Subtotal auto-update
+- [x] Hapus item ? Item removed, total recalculated
+- [x] Empty cart ? Cannot proceed (error message)
+- [x] Bayar sekarang ? Transaction saved, stok updated
+- [x] Riwayat transaksi ? History displayed
+
+### Admin Operations:
+- [x] CRUD Pasien ? All operations work
+- [x] CRUD Obat ? All operations work
+- [x] CRUD Users ? All operations work
+- [x] CRUD Resep ? All operations work
+- [x] View Transaksi ? Data displayed correctly
+- [x] Input Transaksi ? Stock auto-updated
+
+### Apoteker Operations:
+- [x] Input Transaksi ? Saved successfully
+- [x] View Obat ? List displayed
+- [x] View Resep ? Filter by pasien works
+
+---
+
+## Catatan Penting
+
+### Password Security
 **PENTING**: Password saat ini disimpan dalam **plain text** di database. Ini **TIDAK AMAN** untuk production!
 
 **Untuk production environment:**
@@ -435,7 +484,7 @@ string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
 bool isValid = BCrypt.Net.BCrypt.Verify(password, hashedPassword);
 ```
 
-### ??? Backup Database
+### Backup Database
 Backup database secara berkala:
 ```sh
 # Backup
@@ -445,17 +494,17 @@ mysqldump -u root -p klinik_db > backup_klinik_db_2024-12-01.sql
 mysql -u root -p klinik_db < backup_klinik_db_2024-12-01.sql
 ```
 
-### ?? Security Best Practices (For Production)
-- ? Hash passwords (BCrypt/Argon2)
-- ? Use stored procedures (SQL injection prevention)
-- ? Implement session management
-- ? Add audit logging (who did what, when)
-- ? Use HTTPS for remote connections
-- ? Encrypt sensitive data at rest
+### Security Best Practices (For Production)
+- Hash passwords (BCrypt/Argon2)
+- Use stored procedures (SQL injection prevention)
+- Implement session management
+- Add audit logging (who did what, when)
+- Use HTTPS for remote connections
+- Encrypt sensitive data at rest
 
 ---
 
-## ?? Referensi & Credits
+## Referensi & Credits
 
 - **Windows Forms**: [Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/desktop/winforms/)
 - **MySQL Connector/NET**: [MySQL Documentation](https://dev.mysql.com/doc/connector-net/en/)
@@ -465,15 +514,15 @@ mysql -u root -p klinik_db < backup_klinik_db_2024-12-01.sql
 
 ---
 
-## ?? Lisensi
+## Lisensi
 
-Proyek ini dibuat untuk keperluan akademik (Final Project Visual Programming - Semester 5).
+Proyek ini dibuat untuk keperluan akademik (Tugas Akhir Visual Programming - Semester 5).
 
-**© 2024 Kelompok [4] - Visual Programming Class**
+**Copyright 2024 Kelompok [4] - Visual Programming Class**
 
 ---
 
-## ?? Kontak
+## Kontak
 
 Untuk pertanyaan atau feedback, silakan hubungi:
 
@@ -482,15 +531,30 @@ Untuk pertanyaan atau feedback, silakan hubungi:
 
 ---
 
+## Future Enhancements (Opsional)
+
+### Planned Features:
+- [ ] **Reporting Module**: Print invoice, sales report, stock report
+- [ ] **Email Notifications**: Reset password, appointment reminders
+- [ ] **Barcode Scanner**: Scan obat untuk faster input
+- [ ] **Photo Upload**: Upload foto obat & pasien
+- [ ] **Export Data**: Export to Excel/PDF
+- [ ] **Dashboard Analytics**: Charts & statistics
+- [ ] **SMS Integration**: Send SMS untuk reminder
+- [ ] **Mobile App**: Android/iOS companion app
+- [ ] **Cloud Sync**: Sync data to cloud database
+
+---
+
 <div align="center">
 
-**?? Dibuat dengan ?? oleh Kelompok [4] - Vispro Class 2024**
+**Dibuat dengan cinta oleh Kelompok [4] - Vispro Class 2024**
 
 *Transforming Healthcare Management with Technology*
 
 ---
 
-### ?? Project Statistics
+### Project Statistics
 
 ![Lines of Code](https://img.shields.io/badge/Lines%20of%20Code-5000%2B-blue)
 ![Forms Count](https://img.shields.io/badge/Forms-15-green)
