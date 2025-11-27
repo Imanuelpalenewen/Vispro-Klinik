@@ -1,4 +1,4 @@
-# Klinik Apotek App - Sistem Manajemen Klinik & Apotek
+﻿# Klinik Apotek App - Sistem Manajemen Klinik & Apotek
 
 **Aplikasi Desktop Manajemen Klinik & Apotek Berbasis Windows Forms**
 
@@ -12,12 +12,12 @@
 ## Tim Pengembang - Kelompok [4]
 
 **Ketua Kelompok:**
-- **Palenewen, Imanuel** - 220211060179
+- **Palenewen, Imanuel**
 
 **Anggota:**
-- **Tjia, David** - 220211060059
-- **Jeblo, Joshua** - 220211060189
-- **Mantiri, Revaldo** - 220211060169
+- **Tjia, David** 
+- **Jeblo, Joshua** 
+- **Mantiri, Revaldo**
 
 **Mata Kuliah:** Visual Programming - (C#)  
 **Semester:** 5  
@@ -95,11 +95,11 @@ Klinik Apotek App adalah aplikasi desktop berbasis Windows Forms (.NET Framework
 5. **transaksi** - History transaksi (id, pasien_id, obat_id, jumlah, total, tanggal)
 
 ### Foreign Keys:
-- `users.pasien_id` ? `pasien.id` (ON DELETE SET NULL)
-- `resep.pasien_id` ? `pasien.id` (ON DELETE CASCADE)
-- `resep.obat_id` ? `obat.id` (ON DELETE CASCADE)
-- `transaksi.pasien_id` ? `pasien.id` (ON DELETE CASCADE)
-- `transaksi.obat_id` ? `obat.id` (ON DELETE CASCADE)
+- `users.pasien_id` → `pasien.id` (ON DELETE SET NULL)
+- `resep.pasien_id` → `pasien.id` (ON DELETE CASCADE)
+- `resep.obat_id` → `obat.id` (ON DELETE CASCADE)
+- `transaksi.pasien_id` → `pasien.id` (ON DELETE CASCADE)
+- `transaksi.obat_id` → `obat.id` (ON DELETE CASCADE)
 
 ### Views:
 - **v_transaksi_lengkap** - Joined view untuk reporting
@@ -160,8 +160,8 @@ public static string ConnectionString = "server=localhost;user id=root;password=
 
 **Via Visual Studio:**
 1. Buka `KlinikApotekApp.sln` di Visual Studio
-2. Build Solution: **Ctrl+Shift+B** (atau Build ? Build Solution)
-3. Run: **F5** (atau Debug ? Start Debugging)
+2. Build Solution: **Ctrl+Shift+B** (atau Build → Build Solution)
+3. Run: **F5** (atau Debug → Start Debugging)
 
 **Via Command Line:**
 ```sh
@@ -173,7 +173,7 @@ cd KlinikApotekApp\bin\Release
 KlinikApotekApp.exe
 ```
 
-? **Aplikasi siap digunakan!**
+✅ **Aplikasi siap digunakan!**
 
 ---
 
@@ -213,7 +213,7 @@ Setelah setup database, gunakan akun berikut untuk login:
    - Password: `apoteker123`
 
 2. **Dashboard Menu:**
-   - **Input Transaksi**: Pilih pasien, obat, jumlah ? Simpan
+   - **Input Transaksi**: Pilih pasien, obat, jumlah → Simpan
    - **View Obat**: Lihat semua obat & stok
    - **View Resep**: Filter resep by pasien
 
@@ -229,7 +229,7 @@ Setelah setup database, gunakan akun berikut untuk login:
    - Username (unique)
    - Password (min 6 karakter)
 3. Klik **"Register"**
-4. Success ? Auto kembali ke login
+4. Success → Auto kembali ke login
 
 #### B. Belanja Obat
 1. **Login** dengan username/password yang dibuat
@@ -238,13 +238,13 @@ Setelah setup database, gunakan akun berikut untuk login:
    - Check obat yang ingin dibeli
    - Edit jumlah (max sesuai stok)
    - Selection tetap tersimpan saat search/refresh
-3. **Klik "Beli Obat"** ? Keranjang terbuka
+3. **Klik "Beli Obat"** → Keranjang terbuka
 4. **Keranjang Belanja**:
    - Review item
    - Edit jumlah (auto-update subtotal)
    - Hapus item jika perlu
    - Lihat total pembayaran
-5. **Klik "Bayar Sekarang"** ? Konfirmasi ? Success!
+5. **Klik "Bayar Sekarang"** → Konfirmasi → Success!
 6. **Tab "Riwayat Transaksi"**:
    - View semua pembelian
    - Tanggal, obat, jumlah, total
@@ -256,7 +256,7 @@ Setelah setup database, gunakan akun berikut untuk login:
 ### Validasi & Error Handling
 - Validasi input form lengkap (required fields, format)
 - Username duplicate checking (real-time)
-- Stock validation (jumlah ? stok tersedia)
+- Stock validation (jumlah ≤ stok tersedia)
 - Quantity validation (jumlah > 0)
 - Database transaction rollback on error
 - Try-catch di semua database operations
@@ -370,8 +370,8 @@ dotnet add package MySql.Data --version 8.0.33
 
 ### Form Designer Error
 **Solusi:**
-1. Clean Solution (Build ? Clean)
-2. Rebuild Solution (Build ? Rebuild)
+1. Clean Solution (Build → Clean)
+2. Rebuild Solution (Build → Rebuild)
 3. Close & reopen Visual Studio
 4. Delete .vs folder (hidden)
 
@@ -381,46 +381,40 @@ dotnet add package MySql.Data --version 8.0.33
 
 ```
 KlinikApotekApp/
-??? KlinikApotekApp/              # Main project folder
-?   ??? Database.cs               # Database helper & connection
-?   ??? Program.cs                # Entry point
-?   ?
-?   ??? Forms/                    # All form files
-?   ?   ??? FormLogin.cs/Designer.cs/resx
-?   ?   ??? FormRegisterUser.cs/Designer.cs/resx
-?   ?   ??? FormAdminDashboard.cs/Designer.cs/resx
-?   ?   ??? FormApotekerDashboard.cs/Designer.cs/resx
-?   ?   ??? FormDashboardUser.cs/Designer.cs/resx
-?   ?   ??? FormPembelianObat.cs/Designer.cs/resx
-?   ?   ??? FormManagePasien.cs/Designer.cs/resx
-?   ?   ??? FormManageObat.cs/Designer.cs/resx
-?   ?   ??? FormManageUsers.cs/Designer.cs/resx
-?   ?   ??? FormManageResep.cs/Designer.cs/resx
-?   ?   ??? FormManageTransaksi.cs/Designer.cs/resx
-?   ?   ??? FormInputTransaksi.cs/Designer.cs/resx
-?   ?   ??? FormViewObat.cs/Designer.cs/resx
-?   ?   ??? FormViewResep.cs/Designer.cs/resx
-?   ?
-?   ??? Properties/               # Assembly info & resources
-?   ?   ??? AssemblyInfo.cs
-?   ?   ??? Resources.Designer.cs
-?   ?   ??? Settings.Designer.cs
-?   ?
-?   ??? bin/                      # Build output (ignored by git)
-?   ??? obj/                      # Temporary build files (ignored)
-?   ??? KlinikApotekApp.csproj    # Project file
-?
-??? database-setup.sql            # Database schema & sample data
-??? KlinikApotekApp.sln           # Solution file
-??? .gitignore                    # Git ignore rules
-??? README.md                     # This file
+├── KlinikApotekApp/              # Main project folder
+│   ├── Database.cs               # Database helper & connection
+│   ├── Program.cs                # Entry point
+│   │
+│   ├── Forms/                    # All form files
+│   │   ├── FormLogin.cs/Designer.cs/resx
+│   │   ├── FormRegisterUser.cs/Designer.cs/resx
+│   │   ├── FormAdminDashboard.cs/Designer.cs/resx
+│   │   ├── FormApotekerDashboard.cs/Designer.cs/resx
+│   │   ├── FormDashboardUser.cs/Designer.cs/resx
+│   │   ├── FormPembelianObat.cs/Designer.cs/resx
+│   │   ├── FormManagePasien.cs/Designer.cs/resx
+│   │   ├── FormManageObat.cs/Designer.cs/resx
+│   │   ├── FormManageUsers.cs/Designer.cs/resx
+│   │   ├── FormManageResep.cs/Designer.cs/resx
+│   │   ├── FormManageTransaksi.cs/Designer.cs/resx
+│   │   ├── FormInputTransaksi.cs/Designer.cs/resx
+│   │   ├── FormViewObat.cs/Designer.cs/resx
+│   │   └── FormViewResep.cs/Designer.cs/resx
+│   │
+│   ├── Properties/               # Assembly info & resources
+│   │   ├── AssemblyInfo.cs
+│   │   ├── Resources.Designer.cs
+│   │   └── Settings.Designer.cs
+│   │
+│   ├── bin/                      # Build output (ignored by git)
+│   ├── obj/                      # Temporary build files (ignored)
+│   └── KlinikApotekApp.csproj    # Project file
+│
+├── database-setup.sql            # Database schema & sample data
+├── KlinikApotekApp.sln           # Solution file
+├── .gitignore                    # Git ignore rules
+└── README.md                     # This file
 
-Documentation/ (AI-generated - not tracked by git)
-??? COMPLETION-SUMMARY.md         # Project completion status
-??? TESTING-GUIDE.md              # Manual testing guide
-??? BUG-FIXES.md                  # Bug fix documentation
-??? USER-MODULE-IMPLEMENTATION-GUIDE.md
-??? QUICK-START-GUIDE.md
 ```
 
 ---
@@ -428,43 +422,43 @@ Documentation/ (AI-generated - not tracked by git)
 ## Testing Checklist
 
 ### Registration Flow:
-- [x] Register dengan data lengkap ? Success
-- [x] Register dengan username duplikat ? Error message
-- [x] Register dengan password < 6 char ? Error message
-- [x] Register dengan field kosong ? Error message
-- [x] Cancel registrasi ? Back to login
+- [x] Register dengan data lengkap → Success
+- [x] Register dengan username duplikat → Error message
+- [x] Register dengan password < 6 char → Error message
+- [x] Register dengan field kosong → Error message
+- [x] Cancel registrasi → Back to login
 
 ### Login Flow:
-- [x] Login as Admin ? Dashboard Admin
-- [x] Login as Apoteker ? Dashboard Apoteker
-- [x] Login as User ? Dashboard User
-- [x] Wrong credentials ? Error message
+- [x] Login as Admin → Dashboard Admin
+- [x] Login as Apoteker → Dashboard Apoteker
+- [x] Login as User → Dashboard User
+- [x] Wrong credentials → Error message
 
 ### User Shopping Flow:
-- [x] Browse obat ? DataGridView populated
-- [x] Search obat by nama ? Filter works
-- [x] Select multiple obat ? Checkbox works
-- [x] Edit jumlah ? Validation (max = stok)
-- [x] Selection persistence ? Saved on search/refresh
-- [x] Beli obat ? Cart opens with selected items
-- [x] Edit jumlah di cart ? Subtotal auto-update
-- [x] Hapus item ? Item removed, total recalculated
-- [x] Empty cart ? Cannot proceed (error message)
-- [x] Bayar sekarang ? Transaction saved, stok updated
-- [x] Riwayat transaksi ? History displayed
+- [x] Browse obat → DataGridView populated
+- [x] Search obat by nama → Filter works
+- [x] Select multiple obat → Checkbox works
+- [x] Edit jumlah → Validation (max = stok)
+- [x] Selection persistence → Saved on search/refresh
+- [x] Beli obat → Cart opens with selected items
+- [x] Edit jumlah di cart → Subtotal auto-update
+- [x] Hapus item → Item removed, total recalculated
+- [x] Empty cart → Cannot proceed (error message)
+- [x] Bayar sekarang → Transaction saved, stok updated
+- [x] Riwayat transaksi → History displayed
 
 ### Admin Operations:
-- [x] CRUD Pasien ? All operations work
-- [x] CRUD Obat ? All operations work
-- [x] CRUD Users ? All operations work
-- [x] CRUD Resep ? All operations work
-- [x] View Transaksi ? Data displayed correctly
-- [x] Input Transaksi ? Stock auto-updated
+- [x] CRUD Pasien → All operations work
+- [x] CRUD Obat → All operations work
+- [x] CRUD Users → All operations work
+- [x] CRUD Resep → All operations work
+- [x] View Transaksi → Data displayed correctly
+- [x] Input Transaksi → Stock auto-updated
 
 ### Apoteker Operations:
-- [x] Input Transaksi ? Saved successfully
-- [x] View Obat ? List displayed
-- [x] View Resep ? Filter by pasien works
+- [x] Input Transaksi → Saved successfully
+- [x] View Obat → List displayed
+- [x] View Resep → Filter by pasien works
 
 ---
 
