@@ -15,6 +15,7 @@ namespace KlinikApotekApp
         private TextBox txtPassword;
         private Button btnLogin;
         private Button btnExit;
+        private Button btnRegister;
         private Panel panelCard;
 
         /// <summary>
@@ -43,6 +44,7 @@ namespace KlinikApotekApp
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnRegister = new System.Windows.Forms.Button();
             this.panelHeader.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.panelCard.SuspendLayout();
@@ -78,7 +80,7 @@ namespace KlinikApotekApp
             this.panelMain.Location = new System.Drawing.Point(0, 70);
             this.panelMain.Name = "panelMain";
             this.panelMain.Padding = new System.Windows.Forms.Padding(20);
-            this.panelMain.Size = new System.Drawing.Size(520, 270);
+            this.panelMain.Size = new System.Drawing.Size(520, 330);
             this.panelMain.TabIndex = 1;
             // 
             // panelCard
@@ -92,9 +94,10 @@ namespace KlinikApotekApp
             this.panelCard.Controls.Add(this.txtPassword);
             this.panelCard.Controls.Add(this.btnLogin);
             this.panelCard.Controls.Add(this.btnExit);
+            this.panelCard.Controls.Add(this.btnRegister);
             this.panelCard.Location = new System.Drawing.Point(50, 35);
             this.panelCard.Name = "panelCard";
-            this.panelCard.Size = new System.Drawing.Size(420, 200);
+            this.panelCard.Size = new System.Drawing.Size(420, 260);
             this.panelCard.TabIndex = 0;
             // 
             // lblUsername
@@ -132,13 +135,15 @@ namespace KlinikApotekApp
             // 
             // btnLogin
             // 
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(134)))), ((int)(((byte)(193)))));
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(24, 142);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(170, 32);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnExit
@@ -152,11 +157,23 @@ namespace KlinikApotekApp
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnRegister
+            // 
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(134)))), ((int)(((byte)(193)))));
+            this.btnRegister.Location = new System.Drawing.Point(24, 195);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(360, 40);
+            this.btnRegister.TabIndex = 6;
+            this.btnRegister.Text = "Daftar Sebagai Pasien Baru";
+            this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 340);
+            this.ClientSize = new System.Drawing.Size(520, 400);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;

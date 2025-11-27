@@ -65,10 +65,21 @@ namespace KlinikApotekApp
                                     apo.ShowDialog();
                                     this.Show();
                                 }
+                                else if (role.Equals("User", StringComparison.OrdinalIgnoreCase))
+                                {
+                                    var user = new FormDashboardUser();
+                                    user.LoggedUserId = userId;
+                                    this.Hide();
+                                    user.ShowDialog();
+                                    this.Show();
+                                }
                                 else
                                 {
                                     MessageBox.Show("Role user tidak dikenali.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
+                                
+                                // Clear password setelah login
+                                txtPassword.Text = "";
                             }
                             else
                             {
@@ -82,6 +93,17 @@ namespace KlinikApotekApp
             {
                 MessageBox.Show("Terjadi kesalahan saat login: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            var formRegister = new FormRegisterUser();
+            this.Hide();
+            if (formRegister.ShowDialog() == DialogResult.OK)
+            {
+                MessageBox.Show("Registrasi berhasil! Silakan login.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            this.Show();
         }
     }
 }

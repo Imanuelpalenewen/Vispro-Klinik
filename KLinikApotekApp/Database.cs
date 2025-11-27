@@ -7,8 +7,9 @@ namespace KlinikApotekApp
     // Helper static class untuk koneksi Database dan utility.
     public static class Database
     {
-        // Sesuaikan connection string di sini jika perlu.
-        public static string ConnectionString = "server=localhost;user id=root;password=Vyd18Tjia12;database=klinik_db;";
+        // XAMPP default connection string (password kosong)
+        // GANTI password jika MySQL Anda pakai password!
+        public static string ConnectionString = "server=localhost;user id=root;password=;database=klinik_db;";
 
         // Mengembalikan MySqlConnection yang sudah terbuka.
         public static MySqlConnection GetConnection()

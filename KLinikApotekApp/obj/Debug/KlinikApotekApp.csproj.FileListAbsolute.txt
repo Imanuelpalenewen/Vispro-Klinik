@@ -104,3 +104,4 @@ D:\Document\Kuliah\Sem 5\Vispro - C\Final\Clinic\KlinikApotekApp\KlinikApotekApp
 D:\Document\Kuliah\Sem 5\Vispro - C\Final\Clinic\KlinikApotekApp\KlinikApotekApp\KlinikApotekApp\obj\Debug\KlinikApotekApp.pdb
 D:\Document\Kuliah\Sem 5\Vispro - C\Final\Clinic\KlinikApotekApp\KlinikApotekApp\KlinikApotekApp\obj\Debug\KlinikApotekApp.FormDashboardUser.resources
 D:\Document\Kuliah\Sem 5\Vispro - C\Final\Clinic\KlinikApotekApp\KlinikApotekApp\KlinikApotekApp\obj\Debug\KlinikApotekApp.FormRegisterUser.resources
+D:\Document\Kuliah\Sem 5\Vispro - C\Final\Clinic\KlinikApotekApp\KlinikApotekApp\KlinikApotekApp\obj\Debug\KlinikApotekApp.FormPembelianObat.resources

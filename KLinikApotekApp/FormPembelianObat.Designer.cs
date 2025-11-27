@@ -32,14 +32,14 @@
             this.button2 = new System.Windows.Forms.Button();
             this.lblHeader = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvKeranjang = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.btnBatal = new System.Windows.Forms.Button();
+            this.btnBayar = new System.Windows.Forms.Button();
             this.panelHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKeranjang)).BeginInit();
             this.SuspendLayout();
             // 
             // panelHeader
@@ -85,13 +85,13 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Daftar Obat yang dipilih :";
             // 
-            // dataGridView1
+            // dgvKeranjang
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(50, 137);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(692, 256);
-            this.dataGridView1.TabIndex = 4;
+            this.dgvKeranjang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKeranjang.Location = new System.Drawing.Point(50, 137);
+            this.dgvKeranjang.Name = "dgvKeranjang";
+            this.dgvKeranjang.Size = new System.Drawing.Size(692, 256);
+            this.dgvKeranjang.TabIndex = 4;
             // 
             // label1
             // 
@@ -114,54 +114,54 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Rp. ";
             // 
-            // label4
+            // lblTotal
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(215, 421);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(11, 16);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "-";
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(215, 421);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(11, 16);
+            this.lblTotal.TabIndex = 7;
+            this.lblTotal.Text = "-";
             // 
-            // button1
+            // btnBatal
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkGray;
-            this.button1.Location = new System.Drawing.Point(642, 471);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 35);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Batalkan";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnBatal.BackColor = System.Drawing.Color.DarkGray;
+            this.btnBatal.Location = new System.Drawing.Point(642, 471);
+            this.btnBatal.Name = "btnBatal";
+            this.btnBatal.Size = new System.Drawing.Size(100, 35);
+            this.btnBatal.TabIndex = 8;
+            this.btnBatal.Text = "Batalkan";
+            this.btnBatal.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnBayar
             // 
-            this.button3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button3.Location = new System.Drawing.Point(479, 471);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 35);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Bayar Sekarang";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnBayar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnBayar.Location = new System.Drawing.Point(479, 471);
+            this.btnBayar.Name = "btnBayar";
+            this.btnBayar.Size = new System.Drawing.Size(100, 35);
+            this.btnBayar.TabIndex = 9;
+            this.btnBayar.Text = "Bayar Sekarang";
+            this.btnBayar.UseVisualStyleBackColor = false;
             // 
             // FormPembelianObat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 550);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnBayar);
+            this.Controls.Add(this.btnBatal);
+            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvKeranjang);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panelHeader);
             this.Name = "FormPembelianObat";
             this.Text = "FormPembelianObat";
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKeranjang)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,11 +173,11 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lblHeader;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvKeranjang;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Button btnBatal;
+        private System.Windows.Forms.Button btnBayar;
     }
 }

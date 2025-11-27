@@ -42,13 +42,14 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.txtNamaLengkap = new System.Windows.Forms.TextBox();
+            this.txtUmur = new System.Windows.Forms.TextBox();
+            this.txtNoHP = new System.Windows.Forms.TextBox();
+            this.txtAlamat = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.btnRegister = new System.Windows.Forms.Button();
+            this.btnBackToLogin = new System.Windows.Forms.Button();
             this.panelHeader.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,11 +58,11 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(290, 19);
+            this.lblTitle.Location = new System.Drawing.Point(250, 19);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(210, 30);
+            this.lblTitle.Size = new System.Drawing.Size(280, 30);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Form Register User";
+            this.lblTitle.Text = "Registrasi Pasien Baru";
             this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
             // 
             // panelHeader
@@ -78,188 +79,211 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(140, 116);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(140, 100);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 16);
+            this.label1.Size = new System.Drawing.Size(100, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Nama Lengkap";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(280, 116);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(280, 100);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(10, 16);
+            this.label2.Size = new System.Drawing.Size(11, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = ":";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(280, 145);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(280, 135);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(10, 16);
+            this.label3.Size = new System.Drawing.Size(11, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = ":";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(140, 145);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(140, 135);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 16);
+            this.label4.Size = new System.Drawing.Size(39, 17);
             this.label4.TabIndex = 4;
             this.label4.Text = "Umur";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(280, 174);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(280, 170);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(10, 16);
+            this.label5.Size = new System.Drawing.Size(11, 17);
             this.label5.TabIndex = 7;
             this.label5.Text = ":";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(140, 174);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(140, 170);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 16);
+            this.label6.Size = new System.Drawing.Size(47, 17);
             this.label6.TabIndex = 6;
             this.label6.Text = "No HP";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(280, 259);
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(280, 270);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(10, 16);
+            this.label7.Size = new System.Drawing.Size(11, 17);
             this.label7.TabIndex = 13;
             this.label7.Text = ":";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(140, 259);
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(140, 270);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(103, 16);
+            this.label8.Size = new System.Drawing.Size(103, 17);
             this.label8.TabIndex = 12;
             this.label8.Text = "Password Login";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(280, 231);
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(280, 240);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(10, 16);
+            this.label9.Size = new System.Drawing.Size(11, 17);
             this.label9.TabIndex = 11;
             this.label9.Text = ":";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(140, 231);
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(140, 240);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(106, 16);
+            this.label10.Size = new System.Drawing.Size(106, 17);
             this.label10.TabIndex = 10;
             this.label10.Text = "Username Login";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(280, 201);
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(280, 205);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(10, 16);
+            this.label11.Size = new System.Drawing.Size(11, 17);
             this.label11.TabIndex = 9;
             this.label11.Text = ":";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(140, 201);
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(140, 205);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(49, 16);
+            this.label12.Size = new System.Drawing.Size(49, 17);
             this.label12.TabIndex = 8;
             this.label12.Text = "Alamat";
             // 
-            // textBox1
+            // txtNamaLengkap
             // 
-            this.textBox1.Location = new System.Drawing.Point(296, 115);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(255, 20);
-            this.textBox1.TabIndex = 14;
+            this.txtNamaLengkap.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNamaLengkap.Location = new System.Drawing.Point(296, 97);
+            this.txtNamaLengkap.Name = "txtNamaLengkap";
+            this.txtNamaLengkap.Size = new System.Drawing.Size(350, 23);
+            this.txtNamaLengkap.TabIndex = 14;
             // 
-            // textBox2
+            // txtUmur
             // 
-            this.textBox2.Location = new System.Drawing.Point(295, 143);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(75, 20);
-            this.textBox2.TabIndex = 15;
+            this.txtUmur.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUmur.Location = new System.Drawing.Point(296, 132);
+            this.txtUmur.Name = "txtUmur";
+            this.txtUmur.Size = new System.Drawing.Size(100, 23);
+            this.txtUmur.TabIndex = 15;
             // 
-            // textBox3
+            // txtNoHP
             // 
-            this.textBox3.Location = new System.Drawing.Point(295, 174);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(256, 20);
-            this.textBox3.TabIndex = 16;
+            this.txtNoHP.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNoHP.Location = new System.Drawing.Point(296, 167);
+            this.txtNoHP.Name = "txtNoHP";
+            this.txtNoHP.Size = new System.Drawing.Size(350, 23);
+            this.txtNoHP.TabIndex = 16;
             // 
-            // textBox4
+            // txtAlamat
             // 
-            this.textBox4.Location = new System.Drawing.Point(295, 201);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(256, 20);
-            this.textBox4.TabIndex = 17;
+            this.txtAlamat.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtAlamat.Location = new System.Drawing.Point(296, 202);
+            this.txtAlamat.Name = "txtAlamat";
+            this.txtAlamat.Size = new System.Drawing.Size(350, 23);
+            this.txtAlamat.TabIndex = 17;
             // 
-            // textBox5
+            // txtUsername
             // 
-            this.textBox5.Location = new System.Drawing.Point(295, 230);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(256, 20);
-            this.textBox5.TabIndex = 18;
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUsername.Location = new System.Drawing.Point(296, 237);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(350, 23);
+            this.txtUsername.TabIndex = 18;
             // 
-            // textBox6
+            // txtPassword
             // 
-            this.textBox6.Location = new System.Drawing.Point(295, 258);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(256, 20);
-            this.textBox6.TabIndex = 19;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPassword.Location = new System.Drawing.Point(296, 267);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '●';
+            this.txtPassword.Size = new System.Drawing.Size(350, 23);
+            this.txtPassword.TabIndex = 19;
+            this.txtPassword.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
-            // button3
+            // btnRegister
             // 
-            this.button3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button3.Location = new System.Drawing.Point(295, 315);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 35);
-            this.button3.TabIndex = 20;
-            this.button3.Text = "Register";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(134)))), ((int)(((byte)(193)))));
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegister.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnRegister.ForeColor = System.Drawing.Color.White;
+            this.btnRegister.Location = new System.Drawing.Point(296, 315);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(170, 40);
+            this.btnRegister.TabIndex = 20;
+            this.btnRegister.Text = "Register";
+            this.btnRegister.UseVisualStyleBackColor = false;
+            // 
+            // btnBackToLogin
+            // 
+            this.btnBackToLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBackToLogin.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnBackToLogin.Location = new System.Drawing.Point(476, 315);
+            this.btnBackToLogin.Name = "btnBackToLogin";
+            this.btnBackToLogin.Size = new System.Drawing.Size(170, 40);
+            this.btnBackToLogin.TabIndex = 21;
+            this.btnBackToLogin.Text = "Kembali";
+            this.btnBackToLogin.UseVisualStyleBackColor = true;
             // 
             // FormRegisterUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 393);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(800, 400);
+            this.Controls.Add(this.btnBackToLogin);
+            this.Controls.Add(this.btnRegister);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.txtAlamat);
+            this.Controls.Add(this.txtNoHP);
+            this.Controls.Add(this.txtUmur);
+            this.Controls.Add(this.txtNamaLengkap);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
@@ -273,8 +297,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelHeader);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "FormRegisterUser";
-            this.Text = "RegisterUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Registrasi Pasien";
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             this.ResumeLayout(false);
@@ -298,12 +325,13 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txtNamaLengkap;
+        private System.Windows.Forms.TextBox txtUmur;
+        private System.Windows.Forms.TextBox txtNoHP;
+        private System.Windows.Forms.TextBox txtAlamat;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.Button btnBackToLogin;
     }
 }

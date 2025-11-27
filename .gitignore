@@ -43,7 +43,6 @@ _TeamCity*
 
 # AxoCover
 .axoCover/*
-!.axoCover/settings.json
 
 # Coverlet
 coverage*.json
@@ -241,3 +240,20 @@ $RECYCLE.BIN/
 *.temp
 *.log
 *.bak
+
+# =========================
+# Documentation files (AI-generated)
+# =========================
+
+# AI-generated documentation and guides
+README.md
+COMPLETION-SUMMARY.md
+TESTING-GUIDE.md
+BUG-FIXES.md
+USER-MODULE-IMPLEMENTATION-GUIDE.md
+QUICK-START-GUIDE.md
+
+# Alternative: Exclude all markdown files except specific ones
+# *.md
+# !IMPORTANT-README.md
+# !CONTRIBUTING.md

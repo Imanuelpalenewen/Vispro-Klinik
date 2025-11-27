@@ -10,6 +10,15 @@ namespace KlinikApotekApp
         public FormViewResep()
         {
             InitializeComponent();
+            
+            // Wire event handlers in constructor
+            this.Load += FormViewResep_Load;
+            btnFilter.Click += btnFilter_Click;
+            btnClearFilter.Click += btnClearFilter_Click;
+        }
+
+        private void FormViewResep_Load(object sender, EventArgs e)
+        {
             LoadComboPasien();
             LoadData();
         }
@@ -19,6 +28,8 @@ namespace KlinikApotekApp
             try
             {
                 cbPasien.Items.Clear();
+                cbPasien.Items.Add(new ComboboxItem("-- Semua Pasien --", 0));
+                
                 using (var conn = Database.GetConnection())
                 {
                     conn.Open();
@@ -32,10 +43,16 @@ namespace KlinikApotekApp
                         }
                     }
                 }
+                
+                // Set default selection
+                if (cbPasien.Items.Count > 0)
+                {
+                    cbPasien.SelectedIndex = 0;
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Gagal load pasien: " + ex.Message);
+                MessageBox.Show("Gagal load pasien: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -61,32 +78,76 @@ namespace KlinikApotekApp
                             var dt = new DataTable();
                             da.Fill(dt);
                             dgvResep.DataSource = dt;
+                            
+                            // Format columns
+                            if (dgvResep.Columns["id"] != null)
+                            {
+                                dgvResep.Columns["id"].HeaderText = "ID";
+                                dgvResep.Columns["id"].Width = 60;
+                            }
+                            if (dgvResep.Columns["pasien"] != null)
+                            {
+                                dgvResep.Columns["pasien"].HeaderText = "Nama Pasien";
+                            }
+                            if (dgvResep.Columns["obat"] != null)
+                            {
+                                dgvResep.Columns["obat"].HeaderText = "Nama Obat";
+                            }
+                            if (dgvResep.Columns["dosis"] != null)
+                            {
+                                dgvResep.Columns["dosis"].HeaderText = "Dosis";
+                            }
+                            if (dgvResep.Columns["aturan"] != null)
+                            {
+                                dgvResep.Columns["aturan"].HeaderText = "Aturan Pakai";
+                            }
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Gagal load resep: " + ex.Message);
+                MessageBox.Show("Gagal load resep: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnFilter_Click(object sender, EventArgs e)
         {
-            if (cbPasien.SelectedItem == null)
+            try
             {
-                MessageBox.Show("Pilih pasien untuk filter.");
-                return;
+                if (cbPasien.SelectedItem == null)
+                {
+                    MessageBox.Show("Pilih pasien untuk filter.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                
+                var selectedItem = cbPasien.SelectedItem as ComboboxItem;
+                if (selectedItem != null)
+                {
+                    int pasienId = Convert.ToInt32(selectedItem.Value);
+                    LoadData(pasienId);
+                }
             }
-            var it = cbPasien.SelectedItem as ComboboxItem;
-            int pid = Convert.ToInt32(it.Value);
-            LoadData(pid);
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal filter data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnClearFilter_Click(object sender, EventArgs e)
         {
-            cbPasien.SelectedIndex = -1;
-            LoadData(0);
+            try
+            {
+                if (cbPasien.Items.Count > 0)
+                {
+                    cbPasien.SelectedIndex = 0;
+                }
+                LoadData(0);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal clear filter: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private class ComboboxItem
@@ -99,7 +160,7 @@ namespace KlinikApotekApp
 
         private void dgvResep_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            // Reserved for future use
         }
     }
 }
